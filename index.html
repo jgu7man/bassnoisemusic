@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>BassNoise Music</title>
+		<meta name="description" content="Inspiration for Article Intro Effects" />
+		<meta name="keywords" content="dj, music, musica, bassnoise, bass, noise, fanpage, fan, experiencia, experience, fan experience, dubstep, electronic music, musica electronica" />
+		<meta name="author" content="Marxa Digital" />
+		<link rel="shortcut icon" href="img/favicon.png">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="assets/animate.css" />
+
+		
+	</head>
+	<body class="demo-7">
+		<div id="container" class="container intro-effect-jam3">
+			<!-- Top Navigation -->
+			<div class="codrops-top clearfix"></div>
+			<header class="header">
+				<div class="bg-img"><img src="img/smoke.png" alt="Background Image" /></div>
+				<div class="title">
+
+			<!-- Aquí va la navigation bar -->
+						<nav class="codrops-demos">
+							<a href="index.html">Push</a>
+							<a href="index2.html">Fade Out</a>
+							<a href="index3.html">Sliced</a>
+							<a href="index4.html">Side</a>
+							<a href="index5.html">Fixed Side</a>
+							<a href="index6.html">Grid</a>
+							<a class="current-demo" href="index7.html">Jam 3</a>
+						</nav>
+					<div><img class="bntitle" src="img/BASSNOISE (transparente).png"></div>
+				</div>
+			</header>
+			<button class="trigger" data-info="Click to discover"><span>Trigger</span></button>			
+			<!----------------------START VIDEO---------------------------->			
+			
+			<section id="video-oficial">
+				<h1 id="hot-realese" class="sectitle">HOT REALESE</h1>
+				<div class="video_oficial">
+					<iframe src="https://www.youtube.com/embed/whG630VkhGM?ecver=1&amp" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</section>
+			
+			<!-----------------------END VIDEO----------------------------->
+			
+
+			<!----------------------------MUSIC SECTION-------------------->
+			
+			<section id="spotify-section" class="container">
+				<h1 id="music" class="sectitle">MY MUSIC</h1>
+				<h3 class="secsubtitle"></h3>
+				<div id="contenedor">
+					<div  id="columna1" class="foto-music" >
+						<img height="500em" src="media/galeries/DSC06622.jpg" class="half-img"/>
+					</div>
+					<div id="columna2">
+						<iframe class="spotify" src="https://open.spotify.com/embed?uri=spotify:artist:0nkOUHv7t3IBSxtiKFJjWu" width="450" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+					</div>
+				</div>
+			</section>
+
+			<!-----------------------END MUSIC----------------------------->
+			
+			<!-----------------------START GALLERY----------------------------->
+			
+			<section id="instagram-section" class="container">
+				<script src="js/instafeed.min.js" type="text/javascript"></script>
+						<script type="text/javascript">
+							var feed = new Instafeed ({
+								get: 'user',
+								clientId: '1151943114',
+								accessToken: '1151943114.1f2590d.ebecdb1bf25f4859a64615df0f08fd14'
+							})
+							userfeed.run();
+						</script>
+				<h1 id="insta" class="sectitle">FOLLOW ME</h1>
+					<div id="wraper">
+						
+						
+						<div id="insta-wrap">
+							<div id="instafeed>"></div>
+						</div>
+						
+					</div>			 
+			
+			</section>
+			<!-----------------------END GALLERY----------------------------->
+			
+			<!-----------------------END PAGE----------------------------->
+		</div>
+			<!-- /javascript area -->
+			<script src="js/classie.js"></script>
+			
+		<script>
+			
+			
+			(function() {
+
+				// detect if IE : from http://stackoverflow.com/a/16657946		
+				var ie = (function(){
+					var undef,rv = -1; // Return value assumes failure.
+					var ua = window.navigator.userAgent;
+					var msie = ua.indexOf('MSIE ');
+					var trident = ua.indexOf('Trident/');
+
+					if (msie > 0) {
+						// IE 10 or older => return version number
+						rv = parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+					} else if (trident > 0) {
+						// IE 11 (or newer) => return version number
+						var rvNum = ua.indexOf('rv:');
+						rv = parseInt(ua.substring(rvNum + 3, ua.indexOf('.', rvNum)), 10);
+					}
+
+					return ((rv > -1) ? rv : undef);
+				}());
+
+
+				// disable/enable scroll (mousewheel and keys) from http://stackoverflow.com/a/4770179					
+				// left: 37, up: 38, right: 39, down: 40,
+				// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+				var keys = [32, 37, 38, 39, 40], wheelIter = 0;
+
+				function preventDefault(e) {
+					e = e || window.event;
+					if (e.preventDefault)
+					e.preventDefault();
+					e.returnValue = false;  
+				}
+
+				function keydown(e) {
+					for (var i = keys.length; i--;) {
+						if (e.keyCode === keys[i]) {
+							preventDefault(e);
+							return;
+						}
+					}
+				}
+
+				function touchmove(e) {
+					preventDefault(e);
+				}
+
+				function wheel(e) {
+					// for IE 
+					//if( ie ) {
+						//preventDefault(e);
+					//}
+				}
+
+				function disable_scroll() {
+					window.onmousewheel = document.onmousewheel = wheel;
+					document.onkeydown = keydown;
+					document.body.ontouchmove = touchmove;
+				}
+
+				function enable_scroll() {
+					window.onmousewheel = document.onmousewheel = document.onkeydown = document.body.ontouchmove = null;  
+				}
+
+				var docElem = window.document.documentElement,
+					scrollVal,
+					isRevealed, 
+					noscroll, 
+					isAnimating,
+					container = document.getElementById( 'container' ),
+					trigger = container.querySelector( 'button.trigger' );
+
+				function scrollY() {
+					return window.pageYOffset || docElem.scrollTop;
+				}
+				
+				function scrollPage() {
+					scrollVal = scrollY();
+					
+					if( noscroll && !ie ) {
+						if( scrollVal < 0 ) return false;
+						// keep it that way
+						window.scrollTo( 0, 0 );
+					}
+
+					if( classie.has( container, 'notrans' ) ) {
+						classie.remove( container, 'notrans' );
+						return false;
+					}
+
+					if( isAnimating ) {
+						return false;
+					}
+					
+					if( scrollVal <= 0 && isRevealed ) {
+						toggle(0);
+					}
+					else if( scrollVal > 0 && !isRevealed ){
+						toggle(1);
+					}
+				}
+
+				function toggle( reveal ) {
+					isAnimating = true;
+					
+					if( reveal ) {
+						classie.add( container, 'modify' );
+					}
+					else {
+						noscroll = true;
+						disable_scroll();
+						classie.remove( container, 'modify' );
+					}
+
+					// simulating the end of the transition:
+					setTimeout( function() {
+						isRevealed = !isRevealed;
+						isAnimating = false;
+						if( reveal ) {
+							noscroll = false;
+							enable_scroll();
+						}
+					}, 600 );
+				}
+
+				// refreshing the page...
+				var pageScroll = scrollY();
+				noscroll = pageScroll === 0;
+				
+				disable_scroll();
+				
+				if( pageScroll ) {
+					isRevealed = true;
+					classie.add( container, 'notrans' );
+					classie.add( container, 'modify' );
+				}
+				
+				window.addEventListener( 'scroll', scrollPage );
+				trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
+			})();
+		</script>
+	<!--new scrip-->
+		
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+			<script src="assets/viewportchecker.js"></script> 
+			<script type="text/javascript">          
+				
+			jQuery(document).ready(function() {
+				jQuery('.foto-music').addClass("hidden").viewportChecker({
+					classToAdd: 'visible animated slideInRight', // Class to add to the elements when they are visible
+					offset: 100    
+				   });
+				jQuery('.spotify').addClass("hidden").viewportChecker({
+					classToAdd: 'visible animated slideInLeft', // Class to add to the elements when they are visible
+					offset: 100    
+				   });  
+			});            
+			</script>
+		
+	</body>
+</html>
